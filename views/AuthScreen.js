@@ -34,8 +34,7 @@ const AuthScreen = () => {
       </View>
       <View style={styles.footer}>
         <Text style={styles.text_login}>
-          Don't have an account?{" "}
-          <Text style={{ fontWeight: "500" }}>Register</Text>
+          Don't have an account? <Text style={styles.text_bold}>Register</Text>
         </Text>
         <FlatButton
           text="Sign In"
@@ -52,6 +51,10 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "100",
     marginBottom: 20,
+  },
+  text_bold: {
+    color: "white",
+    fontWeight: "600",
   },
   input: {
     height: 40,
@@ -90,6 +93,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#18171F",
     paddingHorizontal: 30,
+    paddingVertical: 20,
   },
   content_inputs: {
     marginTop: 60,
@@ -110,7 +114,6 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
-    marginVertical: 20,
   },
 });
 
