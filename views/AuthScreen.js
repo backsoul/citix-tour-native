@@ -2,13 +2,14 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, Button } from "react-native";
 import FlatButton from ".././components/Button";
 
-const AuthScreen = () => {
+const AuthScreen = ({ navigation }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   function login() {
     console.log(email);
     console.log(password);
+    navigation.navigate("Home");
   }
   return (
     <View style={styles.container}>
@@ -87,10 +88,9 @@ const styles = StyleSheet.create({
     fontFamily: "system-ui",
   },
   container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "#18171F",
     paddingHorizontal: 30,
     paddingVertical: 20,

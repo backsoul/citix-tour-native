@@ -12,23 +12,20 @@ function HomeScreen() {
 }
 
 const Stack = createNativeStackNavigator();
-function Home() {
+
+function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Auth" component={AuthScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
-
-function App() {
-  const auth = false;
-  if (auth) {
-    return Home();
-  } else {
-    return <AuthScreen />;
-  }
 }
 
 export default App;
